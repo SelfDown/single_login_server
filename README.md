@@ -5,12 +5,9 @@
 
 解决办法，当A服务器验证后，在session里保存，B服务器的sessionId,字段为sessionID_From_B。
 
-
 当用户请求A服务器数据，A请求B服务器数据，发现没有登录（sessionID_From_B,为空），直接登录一次，记录sessionID
 
-
 当用户请求A服务器数据，A请求B服务器数据，有sessionID_From_B，直接请求数据，放回结果为过期，直接登录一次，更新数据
-
 
 当用户请求A服务器数据，A请求B服务器数据，有sessionID_From_B，直接请求数据，有结果，直接返回
 
